@@ -18,7 +18,7 @@
             } 
             catch (PDOException $e) 
             {
-                echo "Error to connect with Database!".$e->getMessage();
+                echo "ERRO".$e->getMessage();
                 die();
             }
         } 

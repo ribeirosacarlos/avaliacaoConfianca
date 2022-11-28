@@ -20,6 +20,11 @@
             require_once "./views/$view.php";
         }
 
+        public function edit($data){
+            $result = $this->model->edit($data);
+            $this->redirectWithMessage('edit',$result);
+        }
+
         public function goToNew(){
             require_once "./views/editCreate.php";
         }
@@ -27,11 +32,6 @@
         public function new($data){
             $result = $this->model->new($data);
             $this->redirectWithMessage('insert',$result);
-        }
-
-        public function edit($data){
-            $result = $this->model->edit($data);
-            $this->redirectWithMessage('edit',$result);
         }
 
         public function delete($id){
